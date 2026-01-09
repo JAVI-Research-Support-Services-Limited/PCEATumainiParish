@@ -1,0 +1,162 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
+export default function StLuke() {
+  const scrollToLocation = () => {
+    const element = document.getElementById("location");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className="bg-white min-h-screen relative overflow-x-hidden">
+      {/* SECTION 1: HERO */}
+      <section className="relative h-screen flex flex-col items-start justify-center text-white overflow-hidden">
+        <div className="absolute inset-0 w-full h-full bg-black">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover"
+            style={{ minHeight: "100%" }}
+          >
+            <source src="/st-luke-hero.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 z-10" />
+        <div className="relative z-20 max-w-4xl space-y-8 px-8 md:px-12 lg:px-20">
+          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold text-white">
+            At St Luke,
+          </h1>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold text-white">
+            We worship, praise and serve GOD
+          </h1>
+          <p className="font-sans text-xl md:text-3xl font-medium text-white/90 pt-4">
+            Commit your work to the LORD, and your plans will be established.
+          </p>
+          <p className="font-sans text-lg md:text-xl font-light text-white/80">
+            Proverbs 16:3
+          </p>
+          <div className="flex flex-wrap gap-4 pt-4">
+            <Button onClick={scrollToLocation} className="font-sans bg-white text-black hover:bg-neutral-300 active:bg-neutral-400 h-14 px-8 text-base transition-colors rounded-sm cursor-pointer">
+              Join Us In Person
+            </Button>
+            <Button asChild className="font-sans bg-transparent text-white hover:bg-white/10 active:bg-white/20 h-14 px-8 text-base transition-colors rounded-sm border border-white/30">
+              <Link to="/worship#live">Join Us Online</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: VISION */}
+      <section className="relative z-20 bg-neutral-950 text-white py-28 px-8 md:px-20">
+        <div className="max-w-4xl mx-auto md:mx-0">
+          <h2 className="font-display text-4xl md:text-6xl font-bold mb-10 leading-tight">
+            In our church, we love and trust Jesus
+          </h2>
+          <div className="space-y-8 font-sans text-lg md:text-2xl font-light text-white/90 leading-relaxed">
+            <p>
+              At PCEA St. Luke Church – Tumaini Parish, we are a Christ-centered family rooted in God's love and guided by His Word. We believe that faith was never meant to be lived in isolation. Every believer was created to belong, and here, you will always find a place to worship, to grow, and to serve.
+            </p>
+            <p className="font-sans text-white/60 italic font-normal text-base md:text-xl border-l-2 border-white/20 pl-8">
+              As a parish, we carry forward the Presbyterian heritage of faith and service while embracing the needs of today's community. From children to elders, from families to individuals, we walk together in Christ, trusting Him to shape our lives and lead us in His purpose.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button asChild className="font-sans bg-white text-black hover:bg-neutral-300 active:bg-neutral-400 h-12 px-8 text-base transition-colors rounded-sm">
+                <Link to="/news">Church News</Link>
+              </Button>
+              <Button asChild className="font-sans bg-transparent text-white hover:bg-white/10 active:bg-white/20 h-12 px-8 text-base transition-colors rounded-sm border border-white/30">
+                <a href="http://localhost:8080/events" target="_blank" rel="noopener noreferrer">Event Calendar</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: MINISTRIES */}
+      <section className="relative z-20 bg-white py-32 px-8 md:px-20 border-b border-neutral-100">
+        <div className="max-w-5xl">
+          <span className="font-sans text-sm font-bold text-primary uppercase tracking-[0.3em] mb-4 block">
+            Our Ministries
+          </span>
+          <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-neutral-900 leading-[1.1]">
+            There's a place for you in what God is doing in our house.
+          </h2>
+          <div className="mt-14">
+             <Button asChild className="font-sans bg-black text-white hover:bg-neutral-600 active:bg-neutral-800 h-12 px-8 text-base transition-colors rounded-sm">
+               <Link to="/ministries">Explore Ministries</Link>
+             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: NEXT STEPS */}
+      <section className="relative z-20 h-[85vh] flex items-center bg-black text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50 z-0"
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=1600")' }}
+        />
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="relative z-20 px-8 md:px-20 lg:px-32 w-full">
+           <span className="font-sans text-sm font-bold uppercase tracking-[0.4em] mb-6 block opacity-80">Next Steps</span>
+           <h2 className="font-display text-6xl md:text-8xl font-bold leading-none mb-10">
+             Join to the <br/> Great Commission <br/>
+             <span className="font-normal italic font-display opacity-90 text-primary">of Christ</span>
+           </h2>
+           <Button asChild className="font-sans bg-white text-black hover:bg-neutral-300 active:bg-neutral-400 h-16 px-10 text-lg transition-colors rounded-sm shadow-xl">
+            <Link to="/get-involved">Get Involved Now</Link>
+           </Button>
+        </div>
+      </section>
+
+      {/* SECTION 5: SERMON */}
+      <section className="relative z-20 bg-neutral-50 py-32 px-8 md:px-20">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
+          <div className="flex-1 space-y-8 text-center lg:text-left">
+            <h2 className="font-display text-4xl md:text-6xl font-bold text-neutral-900 leading-tight">
+              Watch our most <br/> recent sermon
+            </h2>
+            <p className="font-sans text-neutral-500 text-lg md:text-xl font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
+              Stay connected and grow in the Word anytime, anywhere through our archive of messages.
+            </p>
+            <div className="pt-4">
+              <Button asChild className="font-sans bg-black text-white hover:bg-neutral-600 active:bg-neutral-800 h-12 px-8 text-base transition-colors rounded-sm border border-black">
+                <Link to="/worship#live">Watch All Sermons</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="flex-1 w-full relative">
+            <div className="aspect-video rounded-sm overflow-hidden bg-neutral-900 shadow-3xl border-8 border-white">
+              <div className="absolute inset-0 flex items-center justify-center group cursor-pointer">
+                <div className="absolute inset-0 bg-neutral-800 opacity-60 group-hover:opacity-40 transition-opacity" />
+                <div className="relative w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110">
+                   <div className="w-0 h-0 border-t-[15px] border-t-transparent border-l-[25px] border-l-primary border-b-[15px] border-b-transparent ml-2" />
+                </div>
+              </div>
+            </div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full -z-10 opacity-10 animate-pulse" />
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: LOCATION */}
+      <section id="location" className="relative z-20 bg-neutral-900 py-0 px-0">
+        <iframe
+          width="1440"
+          height="400"
+          frameBorder="0"
+          scrolling="no"
+          marginHeight="0"
+          marginWidth="0"
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?width=1440&amp;height=400&amp;hl=en&amp;q=PCEA%20St.%20Luke%20Utawala%20Nairobi+(pcea%20st%20luke)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          title="PCEA St Luke Location"
+          style={{ width: "100%", height: "400px", border: 0 }}
+        />
+      </section>
+    </div>
+  );
+}
