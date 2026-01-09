@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-"build": "tsc --noEmit && vite build --outDir spa",
+""    "build": "tsc --noEmit && vite build --outDir spa",
     "build:vercel": "vite build --config vite.config.vercel.ts",
     "preview": "vite preview",
     "start": "tsx server/node-build.ts",
