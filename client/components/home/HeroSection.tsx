@@ -38,7 +38,7 @@ export function HeroSection({
   };
 
   return (
-    <section id="home" className="relative w-full h-screen min-h-[600px] overflow-hidden">
+    <section id="home" className="relative w-full overflow-hidden" style={{ height: 'calc(100vh - 64px)' }}>
       {/* Background Video */}
       {videoSrc && (
         <div className="absolute inset-0 w-full h-full bg-black">
@@ -48,7 +48,6 @@ export function HeroSection({
             muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: "top" }}
           >
             <source src={videoSrc} type="video/mp4" />
           </video>

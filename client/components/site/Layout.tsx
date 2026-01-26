@@ -36,32 +36,35 @@ export default function Layout({ children, showNav }: LayoutProps) {
   }, [location.pathname]);
 
   // Determine logo and CTA text based on context
-  let logoText = "P.C.E.A";
-  let logoSubtext = "Tumaini Parish (UTAWALA)";
-  let ctaText = "Give to Tumaini Parish";
-  let ctaLink = "/give";
+  let homeLink = "/st-luke"; // Default to St. Luke if no context
+  let currentLogoText = "P.C.E.A Tumaini Parish";
+  let currentLogoSubtext = "(UTAWALA)";
+  let currentCtaText = "Give to Tumaini Parish";
+  let currentCtaLink = "/give";
 
-  if (!churchContext && location.pathname === "/") {
-    logoText = "P.C.E.A Tumaini Parish";
-    logoSubtext = "(UTAWALA)";
-    ctaText = "Give to Tumaini Parish";
-    ctaLink = "/give";
-  } else if (churchContext === "st-luke") {
-    logoText = "P.C.E.A";
-    logoSubtext = "St Luke Church (UTAWALA)";
-    ctaText = "Give to St Luke";
-    ctaLink = "/st-luke/give";
+  if (churchContext === "st-luke") {
+    currentLogoText = "P.C.E.A";
+    currentLogoSubtext = "St Luke Church (UTAWALA)";
+    currentCtaText = "Give to St Luke";
+    currentCtaLink = "/st-luke/give";
+    homeLink = "/st-luke";
   } else if (churchContext === "mwihoko") {
-    logoText = "P.C.E.A";
-    logoSubtext = "Mwihoko Church";
-    ctaText = "Give to Mwihoko";
-    ctaLink = "/mwihoko/give";
+    currentLogoText = "P.C.E.A";
+    currentLogoSubtext = "Mwihoko Church";
+    currentCtaText = "Give to Mwihoko";
+    currentCtaLink = "/mwihoko/give";
+    homeLink = "/mwihoko";
   } else if (churchContext === "emmanuel") {
-    logoText = "P.C.E.A";
-    logoSubtext = "Emmanuel Church";
-    ctaText = "Give to Emmanuel";
-    ctaLink = "/emmanuel/give";
+    currentLogoText = "P.C.E.A";
+    currentLogoSubtext = "Emmanuel Church";
+    currentCtaText = "Give to Emmanuel";
+    currentCtaLink = "/emmanuel/give";
+    homeLink = "/emmanuel";
   }
+
+  // If no specific church context is found, use the overall Tumaini Parish defaults.
+  // This implicitly covers the case of being on the root path ("/") without a stored context.
+  // No need for a separate else if (location.pathname === "/") block for homeLink.
 
   // Show header on all individual church pages, but hide navigation menu on the first main page (/)
   const isMainPage = location.pathname === "/";
@@ -71,17 +74,16 @@ export default function Layout({ children, showNav }: LayoutProps) {
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
-      {!isMainPage && (
-        <Header
-          showNav={shouldShowNav}
-          logoText={logoText}
-          logoSubtext={logoSubtext}
-          ctaText={ctaText}
-          ctaLink={ctaLink}
-        />
-      )}
-      <main className={shouldShowHeader ? "flex-1 -mt-16" : "flex-1"}>{children}</main>
-      <Footer />
+      <Header
+        showNav={!isMainPage}
+        logoText={currentLogoText}
+        logoSubtext={currentLogoSubtext}
+        ctaText={currentCtaText}
+        ctaLink={currentCtaLink}
+        homeLink={homeLink}
+      />
+      <main className="flex-1">{children}</main>
+      {!isMainPage && <Footer size="default" />}
     </div>
   );
 }
