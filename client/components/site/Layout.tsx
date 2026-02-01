@@ -81,6 +81,7 @@ export default function Layout({ children, showNav }: LayoutProps) {
         ctaText={currentCtaText}
         ctaLink={currentCtaLink}
         homeLink={homeLink}
+        forceSolid={isGivePage}
       />
       <main className="flex-1">{children}</main>
       {!isMainPage && <Footer size="default" />}

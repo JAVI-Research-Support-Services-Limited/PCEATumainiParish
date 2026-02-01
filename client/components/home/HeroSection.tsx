@@ -1,141 +1,149 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface HeroSectionProps {
-  title: string;
-  subtitle: string;
-  verse: string;
-  verseRef: string;
-  backgroundImage?: string;
+  title?: string;
+  subtitle?: string;
+  verse?: string;
+  verseRef?: string;
   videoSrc?: string;
   showDropdown?: boolean;
-  ctaText?: string;
-  ctaLink?: string;
 }
 
-export function HeroSection({
-  title,
-  subtitle,
-  verse,
-  verseRef,
-  backgroundImage,
+export default function HeroSection({
+  title = "Welcome to Our Parish Community",
+  subtitle = "Commit your work to the LORD, and your plans will be established.",
+  verse = "For where two or three gather in my name, there am I with them.",
+  verseRef = "Matthew 18:20",
   videoSrc,
   showDropdown = true,
-  ctaText = "Join Us In Person",
-  ctaLink = "#location",
 }: HeroSectionProps) {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const scrollToLocation = () => {
-    if (ctaLink.startsWith("#")) {
-      const element = document.getElementById(ctaLink.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+  // Detect church context from URL
+  const churchPrefix = location.pathname.includes('/st-luke') 
+    ? '/st-luke' 
+    : location.pathname.includes('/mwihoko')
+    ? '/mwihoko'
+    : location.pathname.includes('/emmanuel')
+    ? '/emmanuel'
+    : '';
+
+  const handleParishClick = (parish: string) => {
+    setIsDropdownOpen(false);
+    navigate(`/${parish}`);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   return (
-    <section id="home" className="relative w-full overflow-hidden" style={{ height: 'calc(100vh - 64px)' }}>
-      {/* Background Video */}
-      {videoSrc && (
-        <div className="absolute inset-0 w-full h-full bg-black">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src={videoSrc} type="video/mp4" />
-          </video>
-        </div>
-      )}
-
-      {/* Background Image */}
-      {!videoSrc && backgroundImage && (
-        <img
-          src={backgroundImage}
-          alt="Hero background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      )}
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 z-10" />
-
-      {/* Content */}
-      <div className="absolute z-20 bottom-12 sm:bottom-16 md:bottom-20 lg:bottom-24 left-4 sm:left-8 md:left-12 lg:left-16 max-w-full space-y-3 pointer-events-auto">
-        {/* Main Title */}
-        <h1 className="text-3xl md:text-4xl font-display font-medium leading-[1.1] tracking-tight text-white max-w-[28rem] break-words">
-          {title}
-        </h1>
-
-        {/* Subtitle */}
-        <p className="font-sans text-sm md:text-base font-medium text-white/90 max-w-xl leading-relaxed break-words">
-          {subtitle}
-        </p>
-
-        {/* Verse Reference */}
-        <div className="space-y-1 pt-2">
-          <p className="font-sans text-sm font-light text-white/80 italic max-w-xl leading-relaxed break-words">
-            "{verse}"
-          </p>
-          <p className="font-sans text-xs font-bold tracking-[0.3em] text-white/60 uppercase pt-1">
-            {verseRef}
-          </p>
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 pt-3 items-center max-w-lg">
-          {showDropdown && (
-            <div className="relative">
-              <Button
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
-                className="font-sans bg-black text-white hover:bg-white hover:text-black active:bg-gray-100 active:text-gray-900 h-12 px-6 text-base font-semibold transition-all duration-200 rounded-sm flex items-center gap-2 shadow-lg hover:shadow-xl cursor-pointer border border-transparent hover:border-black/50"
-              >
-                <span>Explore Your Parish</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
-              </Button>
-
-              {/* Dropdown Menu */}
-              {dropdownOpen && (
-                <div
-                  className="absolute bottom-full left-0 mb-2 w-full bg-black/90 backdrop-blur-md rounded shadow-xl overflow-hidden z-50 border border-white/10"
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
-                >
-                  <Link
-                    to="/st-luke"
-                    className="block px-4 py-3 text-white text-sm hover:bg-white/10 transition-colors border-b border-white/5"
-                  >
-                    St Luke Church
-                  </Link>
-                  <Link
-                    to="/mwihoko"
-                    className="block px-4 py-3 text-white text-sm hover:bg-white/10 transition-colors border-b border-white/5"
-                  >
-                    Mwihoko Church
-                  </Link>
-                  <Link
-                    to="/emmanuel"
-                    className="block px-4 py-3 text-white text-sm hover:bg-white/10 transition-colors"
-                  >
-                    Emmanuel Church
-                  </Link>
-                </div>
-              )}
-            </div>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative h-screen w-full overflow-visible">
+        <div className="absolute inset-0">
+          {videoSrc ? (
+            <video
+              src={videoSrc}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920&q=80"
+              alt="Prayer background"
+              className="w-full h-full object-cover"
+            />
           )}
-
-          <Button asChild className="font-sans bg-white text-black hover:bg-neutral-300 active:bg-neutral-400 h-12 px-8 text-base transition-colors rounded-sm cursor-pointer">
-            <Link to="/give">Give Now</Link>
-          </Button>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
         </div>
-      </div>
-    </section>
+
+        <div className="relative z-40 h-full flex flex-col">
+          <div className="flex-1 flex items-center">
+            <div className="container mx-auto px-4 md:px-8 lg:px-16 max-w-7xl">
+              <div className="max-w-2xl">
+                <p className="text-white text-xs md:text-xs mb-3 tracking-wide">
+                  {subtitle}
+                </p>
+                <h1 className="text-white text-3xl md:text-4xl lg:text-5xl leading-tight mb-4 font-serif">
+                  {title}
+                </h1>
+                <p className="text-white text-sm md:text-base mb-4">
+                  Join us in worship, fellowship, and service as we grow together in faith
+                </p>
+                <p className="text-white text-xs md:text-sm mb-6">
+                  {verseRef}
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 items-start">
+                  {/* Show dropdown ONLY on landing page (showDropdown = true) */}
+                  {showDropdown ? (
+                    <div className="relative z-20">
+                      <button
+                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                        className="flex items-center gap-2 px-6 py-3.5 bg-black border border-white rounded text-white text-sm hover:bg-white hover:text-black transition-colors"
+                      >
+                        Explore Your Parish
+                        <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 0L6 6L12 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
+
+                      {isDropdownOpen && (
+                        <div className="absolute top-full mt-2 w-full flex flex-col bg-black rounded overflow-hidden shadow-lg z-30">
+                          <button 
+                            onClick={() => handleParishClick('st-luke')}
+                            className="px-6 py-3.5 text-white text-sm text-center hover:bg-white/10 transition-colors"
+                          >
+                            St Luke Church
+                          </button>
+                          <button 
+                            onClick={() => handleParishClick('mwihoko')}
+                            className="px-6 py-3.5 text-white text-sm text-center hover:bg-white/10 transition-colors"
+                          >
+                            Mwihoko Church
+                          </button>
+                          <button 
+                            onClick={() => handleParishClick('emmanuel')}
+                            className="px-6 py-3.5 text-white text-sm text-center hover:bg-white/10 transition-colors"
+                          >
+                            Emmanuel Church
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    /* Show Join buttons on church-specific pages (showDropdown = false) */
+                    <>
+                      <button 
+                        onClick={() => scrollToSection('location')}
+                        className="px-6 py-3.5 bg-black border border-white rounded text-white text-sm hover:bg-white hover:text-black transition-colors"
+                      >
+                        Join Us In Person
+                      </button>
+                      <button 
+                        onClick={() => scrollToSection('video')}
+                        className="px-6 py-3.5 bg-transparent border border-white rounded text-white text-sm hover:bg-white hover:text-black transition-colors"
+                      >
+                        Join Us Online
+                      </button>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

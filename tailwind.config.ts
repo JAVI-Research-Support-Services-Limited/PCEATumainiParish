@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Roboto", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Inter", "Arial", "sans-serif"],
+        sans: ["Montserrat", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Inter", "Arial", "sans-serif"],
         display: ["Abril Fatface", "serif"],
         serif: ["Abril Fatface", "ui-serif", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
       },

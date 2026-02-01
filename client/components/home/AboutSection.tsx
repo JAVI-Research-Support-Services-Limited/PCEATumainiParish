@@ -1,6 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function AboutSection() {
+  const location = useLocation();
+  
+  // Detect church context from URL
+  const churchPrefix = location.pathname.includes('/st-luke') 
+    ? '/st-luke' 
+    : location.pathname.includes('/mwihoko')
+    ? '/mwihoko'
+    : location.pathname.includes('/emmanuel')
+    ? '/emmanuel'
+    : '';
+
   return (
     <section id="about" className="w-full bg-black py-16 lg:py-24">
       <div className="max-w-7xl px-8 md:px-12 lg:px-20">
@@ -13,16 +24,15 @@ export function AboutSection() {
           family rooted in God's love and guided by His Word. Here, you will
           always find a place to worship, grow, and serve together in Christ.
         </p>
-
         <div className="flex flex-wrap gap-4">
           <Link
-            to="/news"
+            to={`${churchPrefix}/about`}
             className="font-sans bg-white text-black hover:bg-neutral-300 active:bg-neutral-400 h-12 px-8 text-base transition-colors rounded-sm flex items-center justify-center"
           >
-            Church News
+            Learn More About Us
           </Link>
           <Link
-            to="/events"
+            to={`${churchPrefix}/events`}
             className="font-sans bg-transparent text-white hover:bg-white/10 active:bg-white/20 h-12 px-8 text-base transition-colors rounded-sm border border-white/30 flex items-center justify-center"
           >
             Event Calendar

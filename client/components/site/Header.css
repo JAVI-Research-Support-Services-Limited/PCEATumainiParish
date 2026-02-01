@@ -5,9 +5,19 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 40;
+  z-index: 9999; /* FIXED: Increased from 40 to ensure header is always on top */
   background-color: transparent;
   transition: all 0.4s ease-in-out;
+  pointer-events: auto; /* FIXED: Ensure header can receive clicks */
+  isolation: isolate; /* FIXED: Create new stacking context */
+}
+
+/* FIXED: Ensure all clickable elements can receive pointer events */
+.header-navbar a,
+.header-navbar button,
+.header-navbar [role="button"] {
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 /* Scrolled state: Semi-transparent background with blur */
