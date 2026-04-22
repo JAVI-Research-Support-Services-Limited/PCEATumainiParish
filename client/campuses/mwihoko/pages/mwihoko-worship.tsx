@@ -20,13 +20,14 @@ export default function MwihokoWorship() {
                     Deepen Your Faith Daily
                   </h1>
                   <h2 className="text-gray-100 text-sm font-normal leading-relaxed @[480px]:text-lg mt-4 max-w-lg mx-auto">
-                    Your central hub for worship, community, and spiritual growth. Join us online or in person.
+                    Your central hub for worship, community, and spiritual
+                    growth. Join us online or in person.
                   </h2>
                 </div>
                 <div className="flex gap-4 z-10 mt-4 flex-wrap justify-center">
                   <Link
                     to="/mwihoko/give"
-                    className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-all shadow-lg hover:shadow-primary/25"
+                    className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#003366] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#002244] transition-all shadow-lg"
                   >
                     <span className="truncate">Start Today</span>
                   </Link>
@@ -52,19 +53,24 @@ export default function MwihokoWorship() {
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/90 mix-blend-multiply"></div>
             <div className="relative z-10 flex flex-col items-center">
               <div className="flex items-center gap-2 mb-6">
-                <span className="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+                <span className="material-symbols-outlined text-primary text-xl">
+                  auto_awesome
+                </span>
                 <h3 className="text-gray-300 uppercase tracking-widest text-xs font-bold">
                   Verse of the Day
                 </h3>
-                <span className="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+                <span className="material-symbols-outlined text-primary text-xl">
+                  auto_awesome
+                </span>
               </div>
               <blockquote className="text-white text-2xl md:text-4xl font-serif italic mb-6 leading-relaxed max-w-3xl">
-                "For where two or three gather in my name, there am I with them."
+                "For where two or three gather in my name, there am I with
+                them."
               </blockquote>
               <div className="flex items-center gap-3">
-                <div className="h-[1px] w-12 bg-primary"></div>
+                <div className="h-[1px] w-12 bg-[#003366]"></div>
                 <p className="text-white font-bold text-lg">Matthew 18:20</p>
-                <div className="h-[1px] w-12 bg-primary"></div>
+                <div className="h-[1px] w-12 bg-[#003366]"></div>
               </div>
             </div>
           </div>
@@ -80,7 +86,7 @@ export default function MwihokoWorship() {
             </h2>
             <Link
               to="/mwihoko"
-              className="text-primary text-sm font-bold hover:text-blue-500 flex items-center gap-1 group"
+              className="text-[#003366] text-sm font-bold hover:text-[#002244] flex items-center gap-1 group"
             >
               View All Sermons
               <ChevronRight className="text-lg group-hover:translate-x-1 transition-transform" />
@@ -97,7 +103,9 @@ export default function MwihokoWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   42:00
                 </div>
               </div>
@@ -106,7 +114,9 @@ export default function MwihokoWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     Growing in Faith
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Pastor James • Oct 11</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Pastor James • Oct 11
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
                   Steps to spiritual growth and deeper relationship with God.
@@ -129,7 +139,9 @@ export default function MwihokoWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   35:30
                 </div>
               </div>
@@ -138,7 +150,9 @@ export default function MwihokoWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     United in Love
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Pastor Mary • Oct 4</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Pastor Mary • Oct 4
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
                   The power of unity in the body of Christ.
@@ -161,7 +175,9 @@ export default function MwihokoWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   48:15
                 </div>
               </div>
@@ -170,7 +186,9 @@ export default function MwihokoWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     Serving Our Community
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Elder Samuel • Sep 27</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Elder Samuel • Sep 27
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
                   How we can make a difference in our local community.
@@ -192,8 +210,13 @@ export default function MwihokoWorship() {
           {/* Bible Study Groups */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between pb-2">
-              <h2 className="text-gray-900 text-2xl font-bold">Bible Study Groups</h2>
-              <Link to="/mwihoko" className="text-primary text-sm font-bold hover:text-blue-500">
+              <h2 className="text-gray-900 text-2xl font-bold">
+                Bible Study Groups
+              </h2>
+              <Link
+                to="/mwihoko"
+                className="text-[#003366] text-sm font-bold hover:text-[#002244]"
+              >
                 View All
               </Link>
             </div>
@@ -206,10 +229,14 @@ export default function MwihokoWorship() {
                 }}
               ></div>
               <div className="flex-1 min-w-0">
-                <h4 className="text-gray-900 font-bold truncate">Ephesians: Living God's Way</h4>
-                <p className="text-text-secondary text-sm mb-2">Tuesdays • 6:30 PM</p>
+                <h4 className="text-gray-900 font-bold truncate">
+                  Ephesians: Living God's Way
+                </h4>
+                <p className="text-text-secondary text-sm mb-2">
+                  Tuesdays • 6:30 PM
+                </p>
                 <div className="w-full bg-background-dark h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-primary h-full w-1/2 rounded-full"></div>
+                  <div className="bg-[#c05621] h-full w-1/2 rounded-full"></div>
                 </div>
                 <p className="text-[10px] text-gray-500 mt-1 uppercase font-bold tracking-wider">
                   Session 6 of 12
@@ -228,10 +255,14 @@ export default function MwihokoWorship() {
                 }}
               ></div>
               <div className="flex-1 min-w-0">
-                <h4 className="text-gray-900 font-bold truncate">Mwihoko Youth Group</h4>
-                <p className="text-text-secondary text-sm mb-2">Saturdays • 5:00 PM</p>
+                <h4 className="text-gray-900 font-bold truncate">
+                  Mwihoko Youth Group
+                </h4>
+                <p className="text-text-secondary text-sm mb-2">
+                  Saturdays • 5:00 PM
+                </p>
                 <div className="w-full bg-background-dark h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-primary h-full w-3/4 rounded-full"></div>
+                  <div className="bg-[#c05621] h-full w-3/4 rounded-full"></div>
                 </div>
                 <p className="text-[10px] text-gray-500 mt-1 uppercase font-bold tracking-wider">
                   Week 8 of 10
@@ -245,7 +276,10 @@ export default function MwihokoWorship() {
             <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-center mt-2">
               <p className="text-sm text-gray-600">
                 Looking for something else?{" "}
-                <Link to="/mwihoko" className="text-primary font-bold underline decoration-primary/50 underline-offset-2">
+                <Link
+                  to="/mwihoko"
+                  className="text-primary font-bold underline decoration-primary/50 underline-offset-2"
+                >
                   Browse all 10 groups
                 </Link>
               </p>
@@ -255,18 +289,25 @@ export default function MwihokoWorship() {
           {/* Prayer Requests */}
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between pb-4">
-              <h2 className="text-gray-900 text-2xl font-bold">Prayer Requests</h2>
+              <h2 className="text-gray-900 text-2xl font-bold">
+                Prayer Requests
+              </h2>
             </div>
             <div className="flex-1 bg-surface-dark border border-border-dark rounded-xl p-6 flex flex-col justify-between shadow-sm">
               <div>
                 <div className="flex items-start gap-3 mb-6">
-                  <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                    <span className="material-symbols-outlined">volunteer_activism</span>
+                  <div className="p-2 bg-[#003366]/10 rounded-lg text-[#003366]">
+                    <span className="material-symbols-outlined">
+                      volunteer_activism
+                    </span>
                   </div>
                   <div>
-                    <h3 className="text-gray-900 font-bold text-lg">How can we pray for you?</h3>
+                    <h3 className="text-gray-900 font-bold text-lg">
+                      How can we pray for you?
+                    </h3>
                     <p className="text-text-secondary text-sm">
-                      Your requests are shared with our pastoral team.
+                      Your requests are shared with our pastoral team in
+                      confidence.
                     </p>
                   </div>
                 </div>
@@ -305,7 +346,7 @@ export default function MwihokoWorship() {
                   </div>
                 </form>
               </div>
-              <button className="w-full mt-6 bg-primary text-white font-bold h-12 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+              <button className="w-full mt-6 bg-[#003366] text-white font-bold h-12 rounded-lg hover:bg-[#002244] transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
                 <span>Submit Prayer Request</span>
                 <span className="material-symbols-outlined text-lg">send</span>
               </button>

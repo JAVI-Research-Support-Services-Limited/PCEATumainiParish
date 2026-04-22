@@ -2,15 +2,15 @@ import { Link, useLocation } from "react-router-dom";
 
 export function NextStepsPreview() {
   const location = useLocation();
-  
+
   // Detect church context from URL
-  const churchPrefix = location.pathname.includes('/st-luke') 
-    ? '/st-luke' 
-    : location.pathname.includes('/mwihoko')
-    ? '/mwihoko'
-    : location.pathname.includes('/emmanuel')
-    ? '/emmanuel'
-    : '';
+  const churchPrefix = location.pathname.includes("/st-luke")
+    ? "/st-luke"
+    : location.pathname.includes("/mwihoko")
+      ? "/mwihoko"
+      : location.pathname.includes("/emmanuel")
+        ? "/emmanuel"
+        : "";
 
   return (
     <section className="relative w-full py-16 lg:py-20 overflow-hidden">
@@ -26,12 +26,14 @@ export function NextStepsPreview() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl px-8 md:px-12 lg:px-20 text-left">
-        <span className="font-sans text-xs font-bold uppercase tracking-[0.4em] mb-6 block opacity-80 text-white">Next Steps</span>
-        <h2
-          className="text-white font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-none mb-10"
-        >
-          Join to the <br/> Great Commission <br/>
-          <span className="font-normal italic font-display opacity-90 text-white">of Christ</span>
+        <span className="font-sans text-xs font-bold uppercase tracking-[0.4em] mb-6 block opacity-80 text-white">
+          Next Steps
+        </span>
+        <h2 className="text-white font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-none mb-10">
+          Join to the <br /> Great Commission <br />
+          <span className="font-normal italic font-display opacity-90 text-white">
+            of Christ
+          </span>
         </h2>
 
         <p className="text-white font-sans text-base md:text-lg font-light text-white/90 leading-relaxed mb-6 max-w-4xl">
@@ -48,7 +50,7 @@ export function NextStepsPreview() {
 
         <Link
           to={`${churchPrefix}/worship`}
-          className="font-sans bg-white text-black hover:bg-neutral-300 active:bg-neutral-400 h-10 px-6 text-sm transition-colors rounded-sm shadow-xl inline-flex items-center justify-center"
+          className="font-sans bg-white text-[#003366] hover:bg-neutral-300 active:bg-neutral-400 h-10 px-6 text-sm transition-colors rounded-sm shadow-xl inline-flex items-center justify-center"
         >
           Get Involved Now
         </Link>

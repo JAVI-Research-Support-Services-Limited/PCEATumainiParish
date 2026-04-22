@@ -1,57 +1,70 @@
-import React, { useState } from 'react';
-import ChurchInfo from '@/components/give/ChurchInfo';
-import OffertoryForm from '@/components/give/OffertoryForm';
-import SuccessModal from '@/components/give/SuccessModal';
-import { Church, GivingType, PaymentMethod, OffertoryState } from '@/types/give';
+import React, { useState } from "react";
+import ChurchInfo from "@/components/give/ChurchInfo";
+import OffertoryForm from "@/components/give/OffertoryForm";
+import SuccessModal from "@/components/give/SuccessModal";
+import {
+  Church,
+  GivingType,
+  PaymentMethod,
+  OffertoryState,
+} from "@/types/give";
 
 const CHURCHES: Church[] = [
   {
-    id: 'st-luke',
-    name: 'St Luke Church',
-    campus: 'Downtown Campus',
-    address: '123 Main Street, City',
-    times: 'Sun 9AM & 11AM',
-    imageUrl: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=800'
+    id: "st-luke",
+    name: "St Luke Church",
+    congregation: "Downtown Congregation",
+    address: "123 Main Street, City",
+    times: "Sun 9AM & 11AM",
+    imageUrl:
+      "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: 'mwihoko',
-    name: 'Mwihoko Church',
-    campus: 'North Campus',
-    address: '456 North Road, Town',
-    times: 'Sun 8AM & 10:30AM',
-    imageUrl: 'https://images.unsplash.com/photo-1548625361-195feee130d5?auto=format&fit=crop&q=80&w=800'
+    id: "mwihoko",
+    name: "Mwihoko Church",
+    congregation: "North Congregation",
+    address: "456 North Road, Town",
+    times: "Sun 8AM & 10:30AM",
+    imageUrl:
+      "https://images.unsplash.com/photo-1548625361-195feee130d5?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: 'emmanuel',
-    name: 'Emmanuel Church',
-    campus: 'West Campus',
-    address: '789 West Avenue, Suburb',
-    times: 'Sun 7:30AM & 9:30AM',
-    imageUrl: 'https://images.unsplash.com/photo-1523050335456-adabbf72c766?auto=format&fit=crop&q=80&w=800'
-  }
+    id: "emmanuel",
+    name: "Emmanuel Church",
+    congregation: "West Congregation",
+    address: "789 West Avenue, Suburb",
+    times: "Sun 7:30AM & 9:30AM",
+    imageUrl:
+      "https://images.unsplash.com/photo-1523050335456-adabbf72c766?auto=format&fit=crop&q=80&w=800",
+  },
 ];
 
 export default function Give() {
   const [formData, setFormData] = useState<OffertoryState>({
     churchId: CHURCHES[0].id,
     givingType: GivingType.TITHE,
-    amount: '',
-    district: '',
-    fullName: '',
-    phoneNumber: '',
-    email: '',
+    amount: "",
+    district: "",
+    fullName: "",
+    phoneNumber: "",
+    email: "",
     paymentMethod: PaymentMethod.MPESA,
-    mpesaNumber: '',
-    cardNumber: '',
-    cardExpiry: '',
-    cardCvv: '',
-    cardName: ''
+    mpesaNumber: "",
+    cardNumber: "",
+    cardExpiry: "",
+    cardCvv: "",
+    cardName: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [successData, setSuccessData] = useState<{ name: string; type: GivingType; amount: string } | null>(null);
+  const [successData, setSuccessData] = useState<{
+    name: string;
+    type: GivingType;
+    amount: string;
+  } | null>(null);
 
-  const selectedChurch = CHURCHES.find(c => c.id === formData.churchId) || CHURCHES[0];
+  const selectedChurch =
+    CHURCHES.find((c) => c.id === formData.churchId) || CHURCHES[0];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,9 +74,9 @@ export default function Give() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSuccessData({
-        name: formData.fullName || 'Beloved Member',
+        name: formData.fullName || "Beloved Member",
         type: formData.givingType,
-        amount: formData.amount
+        amount: formData.amount,
       });
     }, 2000);
   };
@@ -81,7 +94,9 @@ export default function Give() {
                 <h3 className="text-lg font-display">Faith, Love, Hope</h3>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed font-sans">
-                PCEA Tumaini Parish welcomes your contribution. Your generosity supports our mission to spread the Gospel and serve the community.
+                PCEA Tumaini Parish welcomes your contribution. Your generosity
+                supports our mission to spread the Gospel and serve the
+                community.
               </p>
             </div>
           </div>
@@ -100,10 +115,7 @@ export default function Give() {
       </main>
 
       {successData && (
-        <SuccessModal
-          {...successData}
-          onClose={() => setSuccessData(null)}
-        />
+        <SuccessModal {...successData} onClose={() => setSuccessData(null)} />
       )}
     </div>
   );

@@ -20,7 +20,8 @@ export default function StLukeWorship() {
                     Deepen Your Faith Daily
                   </h1>
                   <h2 className="text-gray-100 text-sm font-normal leading-relaxed @[480px]:text-lg mt-4 max-w-lg mx-auto">
-                    Your central hub for worship, community, and spiritual growth. Join us online or in person.
+                    Your central hub for worship, community, and spiritual
+                    growth. Join us online or in person.
                   </h2>
                 </div>
                 <div className="flex gap-4 z-10 mt-4 flex-wrap justify-center">
@@ -52,20 +53,24 @@ export default function StLukeWorship() {
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/90 mix-blend-multiply"></div>
             <div className="relative z-10 flex flex-col items-center">
               <div className="flex items-center gap-2 mb-6">
-                <span className="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+                <span className="material-symbols-outlined text-primary text-xl">
+                  auto_awesome
+                </span>
                 <h3 className="text-gray-300 uppercase tracking-widest text-xs font-bold">
                   Verse of the Day
                 </h3>
-                <span className="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+                <span className="material-symbols-outlined text-primary text-xl">
+                  auto_awesome
+                </span>
               </div>
               <blockquote className="text-white text-2xl md:text-4xl font-serif italic mb-6 leading-relaxed max-w-3xl">
-                "The Lord is my shepherd; I shall not want. He makes me lie down in green
-                pastures."
+                "The Lord is my shepherd; I shall not want. He makes me lie down
+                in green pastures."
               </blockquote>
               <div className="flex items-center gap-3">
-                <div className="h-[1px] w-12 bg-primary"></div>
+                <div className="h-[1px] w-12 bg-[#003366]"></div>
                 <p className="text-white font-bold text-lg">Psalm 23:1-2</p>
-                <div className="h-[1px] w-12 bg-primary"></div>
+                <div className="h-[1px] w-12 bg-[#003366]"></div>
               </div>
             </div>
           </div>
@@ -98,7 +103,9 @@ export default function StLukeWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   45:00
                 </div>
               </div>
@@ -107,11 +114,13 @@ export default function StLukeWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     Walking in Faith
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Pastor John Doe • Oct 12</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Pastor John Doe • Oct 12
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
-                  Discovering the steps to trust God completely in uncertain times through
-                  scripture.
+                  Discovering the steps to trust God completely in uncertain
+                  times through scripture.
                 </p>
                 <div className="mt-auto pt-2">
                   <button className="w-full h-9 rounded-lg bg-background-dark text-gray-900 text-sm font-semibold hover:bg-gray-200 transition-colors border border-border-dark">
@@ -131,7 +140,9 @@ export default function StLukeWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   38:15
                 </div>
               </div>
@@ -140,11 +151,13 @@ export default function StLukeWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     The Power of Prayer
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Pastor Jane Doe • Oct 5</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Pastor Jane Doe • Oct 5
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
-                  Understanding how prayer changes our perspective and aligns us with God's
-                  will.
+                  Understanding how prayer changes our perspective and aligns us
+                  with God's will.
                 </p>
                 <div className="mt-auto pt-2">
                   <button className="w-full h-9 rounded-lg bg-background-dark text-gray-900 text-sm font-semibold hover:bg-gray-200 transition-colors border border-border-dark">
@@ -164,7 +177,9 @@ export default function StLukeWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   52:30
                 </div>
               </div>
@@ -173,11 +188,13 @@ export default function StLukeWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     Community First
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Guest Speaker • Sep 28</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Guest Speaker • Sep 28
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
-                  Building strong relationships within the church body is essential for spiritual
-                  health.
+                  Building strong relationships within the church body is
+                  essential for spiritual health.
                 </p>
                 <div className="mt-auto pt-2">
                   <button className="w-full h-9 rounded-lg bg-background-dark text-gray-900 text-sm font-semibold hover:bg-gray-200 transition-colors border border-border-dark">
@@ -196,8 +213,13 @@ export default function StLukeWorship() {
           {/* Bible Study Groups */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between pb-2">
-              <h2 className="text-gray-900 text-2xl font-bold">Bible Study Groups</h2>
-              <Link to="/st-luke" className="text-primary text-sm font-bold hover:text-blue-500">
+              <h2 className="text-gray-900 text-2xl font-bold">
+                Bible Study Groups
+              </h2>
+              <Link
+                to="/st-luke"
+                className="text-primary text-sm font-bold hover:text-blue-500"
+              >
                 View All
               </Link>
             </div>
@@ -210,10 +232,14 @@ export default function StLukeWorship() {
                 }}
               ></div>
               <div className="flex-1 min-w-0">
-                <h4 className="text-gray-900 font-bold truncate">Romans: A Deep Dive</h4>
-                <p className="text-text-secondary text-sm mb-2">Wednesdays • 7:00 PM</p>
+                <h4 className="text-gray-900 font-bold truncate">
+                  Romans: A Deep Dive
+                </h4>
+                <p className="text-text-secondary text-sm mb-2">
+                  Wednesdays • 7:00 PM
+                </p>
                 <div className="w-full bg-background-dark h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-primary h-full w-2/3 rounded-full"></div>
+                  <div className="bg-[#c05621] h-full w-2/3 rounded-full"></div>
                 </div>
                 <p className="text-[10px] text-gray-500 mt-1 uppercase font-bold tracking-wider">
                   Session 8 of 12
@@ -232,10 +258,14 @@ export default function StLukeWorship() {
                 }}
               ></div>
               <div className="flex-1 min-w-0">
-                <h4 className="text-gray-900 font-bold truncate">Young Adults Fellowship</h4>
-                <p className="text-text-secondary text-sm mb-2">Fridays • 6:30 PM</p>
+                <h4 className="text-gray-900 font-bold truncate">
+                  Young Adults Fellowship
+                </h4>
+                <p className="text-text-secondary text-sm mb-2">
+                  Fridays • 6:30 PM
+                </p>
                 <div className="w-full bg-background-dark h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-primary h-full w-1/4 rounded-full"></div>
+                  <div className="bg-[#c05621] h-full w-1/4 rounded-full"></div>
                 </div>
                 <p className="text-[10px] text-gray-500 mt-1 uppercase font-bold tracking-wider">
                   Session 3 of 10
@@ -246,10 +276,13 @@ export default function StLukeWorship() {
               </button>
             </div>
 
-            <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-center mt-2">
+            <div className="bg-[#003366]/5 border border-[#003366]/20 rounded-xl p-4 text-center mt-2">
               <p className="text-sm text-gray-600">
                 Looking for something else?{" "}
-                <Link to="/st-luke" className="text-primary font-bold underline decoration-primary/50 underline-offset-2">
+                <Link
+                  to="/st-luke"
+                  className="text-[#003366] font-bold underline decoration-[#003366]/50 underline-offset-2"
+                >
                   Browse all 12 groups
                 </Link>
               </p>
@@ -259,16 +292,22 @@ export default function StLukeWorship() {
           {/* Prayer Requests */}
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between pb-4">
-              <h2 className="text-gray-900 text-2xl font-bold">Prayer Requests</h2>
+              <h2 className="text-gray-900 text-2xl font-bold">
+                Prayer Requests
+              </h2>
             </div>
             <div className="flex-1 bg-surface-dark border border-border-dark rounded-xl p-6 flex flex-col justify-between shadow-sm">
               <div>
                 <div className="flex items-start gap-3 mb-6">
-                  <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                    <span className="material-symbols-outlined">volunteer_activism</span>
+                  <div className="p-2 bg-[#003366]/10 rounded-lg text-[#003366]">
+                    <span className="material-symbols-outlined">
+                      volunteer_activism
+                    </span>
                   </div>
                   <div>
-                    <h3 className="text-gray-900 font-bold text-lg">How can we pray for you?</h3>
+                    <h3 className="text-gray-900 font-bold text-lg">
+                      How can we pray for you?
+                    </h3>
                     <p className="text-text-secondary text-sm">
                       Your requests are shared with our pastoral team.
                     </p>
@@ -309,7 +348,7 @@ export default function StLukeWorship() {
                   </div>
                 </form>
               </div>
-              <button className="w-full mt-6 bg-primary text-white font-bold h-12 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+              <button className="w-full mt-6 bg-[#003366] text-white font-bold h-12 rounded-lg hover:bg-[#002244] transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
                 <span>Submit Prayer Request</span>
                 <span className="material-symbols-outlined text-lg">send</span>
               </button>

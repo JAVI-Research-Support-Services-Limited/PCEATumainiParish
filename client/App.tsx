@@ -15,10 +15,14 @@ import HeroSection from "@/components/home/HeroSection";
 
 // ------------------ PAGES ------------------
 
-// Campus route groups
-const StLukeRoutes = React.lazy(() => import("./campuses/st-luke/routes"));
-const MwihokoRoutes = React.lazy(() => import("./campuses/mwihoko/routes"));
-const EmmanuelRoutes = React.lazy(() => import("./campuses/emmanuel/routes"));
+// Congregation route groups
+const StLukeRoutes = React.lazy(() => import("./congregations/st-luke/routes"));
+const MwihokoRoutes = React.lazy(
+  () => import("./congregations/mwihoko/routes"),
+);
+const EmmanuelRoutes = React.lazy(
+  () => import("./congregations/emmanuel/routes"),
+);
 
 // Fallback page
 const NotFound = React.lazy(() => import("./NotFound"));
@@ -35,8 +39,8 @@ const App = () => (
         <Suspense fallback={<div className="p-10 text-center">Loading...</div>}>
           <Routes>
             {/* Landing page with dropdown */}
-            <Route 
-              path="/" 
+            <Route
+              path="/"
               element={
                 <HeroSection
                   title="Welcome to Our Parish Community"
@@ -45,10 +49,10 @@ const App = () => (
                   verseRef="Matthew 18:20"
                   showDropdown={true}
                 />
-              } 
+              }
             />
 
-            {/* Campuses (shared Layout) */}
+            {/* Congregations (shared Layout) */}
             <Route
               path="/st-luke/*"
               element={

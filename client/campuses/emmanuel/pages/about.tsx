@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function About() {
-  const campusName = "PCEA St Luke";
+  const congregationName = "PCEA St Luke";
 
   return (
     <div className="min-h-screen bg-white text-gray-900 selection:bg-gray-200">
@@ -47,17 +47,24 @@ export default function About() {
               </span>
               <h2 className="text-4xl md:text-5xl text-black leading-tight font-['Abril_Fatface']">
                 The Vision Behind <br />
-                <span className="italic text-navy-900">{campusName}</span>
+                <span className="italic text-navy-900">{congregationName}</span>
               </h2>
               <div className="space-y-6 text-gray-700 font-light leading-relaxed text-sm md:text-base font-['Montserrat']">
                 <p>
-                  {campusName} was established over five decades ago with a simple yet profound mission: to create a sanctuary where the ancient truths of scripture could meet the modern soul's longing for peace.
+                  {congregationName} was established over five decades ago with
+                  a simple yet profound mission: to create a sanctuary where the
+                  ancient truths of scripture could meet the modern soul's
+                  longing for peace.
                 </p>
                 <p>
-                  Our foundation is built upon the pillars of scriptural depth, communal restoration, and a radical commitment to grace. We believe that spiritual growth is not a destination, but a lifelong journey of returning to the light.
+                  Our foundation is built upon the pillars of scriptural depth,
+                  communal restoration, and a radical commitment to grace. We
+                  believe that spiritual growth is not a destination, but a
+                  lifelong journey of returning to the light.
                 </p>
                 <p className="italic text-xl text-black/70">
-                  "In every shadow, there is a promise of light. In every silence, a word of hope."
+                  "In every shadow, there is a promise of light. In every
+                  silence, a word of hope."
                 </p>
               </div>
             </div>
@@ -67,16 +74,17 @@ export default function About() {
 
       {/* Call to Action Section */}
       <section className="py-40 relative flex flex-col items-center justify-center text-center px-6 mb-16 bg-white">
-        <h2 className="text-5xl md:text-7xl text-black mb-8 italic font-['Abril_Fatface']">
+        <h2 className="text-5xl md:text-7xl text-[#003366] mb-8 italic font-['Abril_Fatface']">
           Walk with us
         </h2>
         <p className="text-gray-700 max-w-lg mb-12 text-sm md:text-base font-light tracking-wide font-['Montserrat']">
-          Whether you are searching for answers or seeking a place to rest, our doors and hearts are open. Experience the journey of faith in person.
+          Whether you are searching for answers or seeking a place to rest, our
+          doors and hearts are open. Experience the journey of faith in person.
         </p>
 
         <Link
           to="/st-luke"
-          className="group relative px-12 py-5 bg-black text-white text-xs uppercase tracking-[0.3em] rounded-full hover:bg-navy-900 transition-all duration-500 overflow-hidden font-['Montserrat']"
+          className="group relative px-12 py-5 bg-[#003366] text-white text-xs uppercase tracking-[0.3em] rounded-full hover:bg-[#002244] transition-all duration-500 overflow-hidden font-['Montserrat']"
         >
           <span className="relative z-10">Visit Us This Sunday</span>
           <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>

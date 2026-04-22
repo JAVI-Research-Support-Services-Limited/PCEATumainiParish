@@ -16,14 +16,15 @@ export default function BibleStudy() {
         <div className="relative z-10 max-w-2xl px-6 md:px-12 md:ml-20 text-left text-white mt-20">
           <h1 className="text-5xl md:text-7xl font-display leading-tight mb-6">
             Explore scripture and <br />
-            <span className="italic text-black">discover wisdom.</span>
+            <span className="italic text-[#003366]">discover wisdom.</span>
           </h1>
           <p className="text-lg md:text-xl font-light text-gray-200 mb-10 max-w-lg mr-auto leading-relaxed font-sans">
-            Welcome to our study sanctuary. A place to deepen your understanding, reconnect with
-            the Word, and nurture your spiritual journey.
+            Welcome to our study sanctuary. A place to deepen your
+            understanding, reconnect with the Word, and nurture your spiritual
+            journey.
           </p>
           <a
-            className="inline-flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-black text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-800 transition-all shadow-lg font-sans"
+            className="inline-flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#003366] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#002244] transition-all shadow-lg font-sans"
             href="#studies"
           >
             <span className="truncate">Start a Study Plan</span>
@@ -33,7 +34,10 @@ export default function BibleStudy() {
       </header>
 
       {/* Current Series Section */}
-      <section className="py-24 bg-white dark:bg-background-dark relative overflow-hidden" id="studies">
+      <section
+        className="py-24 bg-white dark:bg-background-dark relative overflow-hidden"
+        id="studies"
+      >
         <div className="container mx-auto px-6 text-center mb-16">
           <span className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 dark:text-gray-400 mb-4 block font-sans">
             Current Series
@@ -56,7 +60,9 @@ export default function BibleStudy() {
               <h3 className="text-2xl font-display text-gray-900 dark:text-white italic">
                 The Gospel of John
               </h3>
-              <p className="text-xs uppercase tracking-widest mt-2 text-black font-sans">12 Weeks</p>
+              <p className="text-xs uppercase tracking-widest mt-2 text-[#003366] font-sans">
+                12 Weeks
+              </p>
             </div>
           </div>
 
@@ -100,7 +106,7 @@ export default function BibleStudy() {
           </div>
         </div>
         <div className="text-center mt-8">
-          <button className="inline-flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-black hover:border-black hover:text-white transition-all font-sans">
+          <button className="inline-flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#003366] hover:border-[#003366] hover:text-white transition-all font-sans">
             <span className="truncate">View All Series</span>
           </button>
         </div>
@@ -121,56 +127,59 @@ export default function BibleStudy() {
             <h2 className="text-4xl md:text-5xl font-display leading-tight">
               Our Study
               <br />
-              <span className="italic text-black">Resources</span>
+              <span className="italic text-[#003366]">Resources</span>
             </h2>
           </div>
           <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2">
             <div className="group border-b border-r border-white/10 p-12 hover:bg-white/5 transition-colors duration-300 cursor-pointer">
-              <span className="text-xs text-black uppercase tracking-widest mb-4 block font-sans">
+              <span className="text-xs text-[#003366] uppercase tracking-widest mb-4 block font-sans">
                 Resource One
               </span>
               <h3 className="text-xl font-display mb-4 group-hover:text-black transition-colors">
                 Weekly Guides
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed font-sans">
-                Download comprehensive PDFs tailored for individual reflection. Each guide includes
-                historical context, cross-references, and prayer prompts.
+                Download comprehensive PDFs tailored for individual reflection.
+                Each guide includes historical context, cross-references, and
+                prayer prompts.
               </p>
             </div>
             <div className="group border-b border-white/10 md:border-r-0 p-12 hover:bg-white/5 transition-colors duration-300 cursor-pointer">
-              <span className="text-xs text-black uppercase tracking-widest mb-4 block font-sans">
+              <span className="text-xs text-[#003366] uppercase tracking-widest mb-4 block font-sans">
                 Resource Two
               </span>
               <h3 className="text-xl font-display mb-4 group-hover:text-black transition-colors">
                 Group Discussion
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed font-sans">
-                Facilitator notes and ice-breaker questions designed to foster deep community and
-                vulnerable conversation within your small group.
+                Facilitator notes and ice-breaker questions designed to foster
+                deep community and vulnerable conversation within your small
+                group.
               </p>
             </div>
             <div className="group border-b md:border-b-0 border-r border-white/10 p-12 hover:bg-white/5 transition-colors duration-300 cursor-pointer">
-              <span className="text-xs text-black uppercase tracking-widest mb-4 block font-sans">
+              <span className="text-xs text-[#003366] uppercase tracking-widest mb-4 block font-sans">
                 Resource Three
               </span>
               <h3 className="text-xl font-display mb-4 group-hover:text-black transition-colors">
                 Video Series
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed font-sans">
-                Access our library of teaching videos from pastors and guest speakers that
-                accompany each major study series.
+                Access our library of teaching videos from pastors and guest
+                speakers that accompany each major study series.
               </p>
             </div>
             <div className="group p-12 hover:bg-white/5 transition-colors duration-300 cursor-pointer">
-              <span className="text-xs text-black uppercase tracking-widest mb-4 block font-sans">
+              <span className="text-xs text-[#003366] uppercase tracking-widest mb-4 block font-sans">
                 Resource Four
               </span>
               <h3 className="text-xl font-display mb-4 group-hover:text-black transition-colors">
                 Reading Plans
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed font-sans">
-                Structured daily reading schedules to help you read through specific books of the
-                Bible or thematic topics over the course of a month.
+                Structured daily reading schedules to help you read through
+                specific books of the Bible or thematic topics over the course
+                of a month.
               </p>
             </div>
           </div>
@@ -187,19 +196,22 @@ export default function BibleStudy() {
                 <span className="italic font-light">Understanding...</span>
               </h2>
               <p className="text-sm leading-7 text-gray-600 dark:text-gray-400 mb-6 font-sans">
-                Founded with a vision of promoting spiritual literacy, we believe in nurturing the
-                mind and soul with diligent study. We provide tools not just for reading, but for
-                comprehending the depth of scripture.
+                Founded with a vision of promoting spiritual literacy, we
+                believe in nurturing the mind and soul with diligent study. We
+                provide tools not just for reading, but for comprehending the
+                depth of scripture.
               </p>
               <p className="text-sm leading-7 text-gray-600 dark:text-gray-400 mb-8 font-sans">
-                Our approach combines traditional hermeneutics with modern teaching methods,
-                creating an environment where faith and understanding grow together.
+                Our approach combines traditional hermeneutics with modern
+                teaching methods, creating an environment where faith and
+                understanding grow together.
               </p>
               <Link
                 to="/about"
-                className="inline-flex items-center text-black uppercase text-xs font-bold tracking-widest hover:text-gray-600 transition-colors font-sans"
+                className="inline-flex items-center text-[#003366] uppercase text-xs font-bold tracking-widest hover:text-gray-600 transition-colors font-sans"
               >
-                Learn More About Our Method <ArrowRight className="ml-2 w-4 h-4" />
+                Learn More About Our Method{" "}
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
             <div className="w-full md:w-1/2 relative h-[600px] flex justify-center items-center">

@@ -4,18 +4,18 @@ export default function Statement() {
       <div className="mx-auto w-[90%] max-w-[1246px] px-6">
         <div className="relative overflow-hidden pb-20">
           <div className="border-b border-gray-200 pb-20 pr-6 lg:max-w-[59.5%]">
-            <div className="bg-[#0e0e0e] h-1 mb-8 w-[100px]" />
+            <div className="bg-[#c05621] h-1 mb-8 w-[100px]" />
 
-            <h2 className="text-[44px] font-extrabold tracking-[0.88px] leading-[58px] mb-4 max-w-[548px] text-black">
+            <h2 className="text-[44px] font-extrabold tracking-[0.88px] leading-[58px] mb-4 max-w-[548px] text-[#003366]">
               In our church, we
               <br />
               love and <span className="whitespace-nowrap">trust Jesus</span>
             </h2>
 
             <p className="mb-14 text-muted-foreground max-w-[620px]">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit urna vitae ac
-              vitae lacus ac proin ultricies eleifend dui ut felis bibendum ut
-              amet nunc turpis diam urna quam congue. Tortor in egestas
+              Lorem ipsum dolor sit amet consectetur adipiscing elit urna vitae
+              ac vitae lacus ac proin ultricies eleifend dui ut felis bibendum
+              ut amet nunc turpis diam urna quam congue. Tortor in egestas
               imperdiet posuere duis enim lectus consectetur arcu ac id in
               mauris.
             </p>
@@ -23,21 +23,21 @@ export default function Statement() {
             <div className="flex items-center gap-4">
               <a
                 href="/news"
-                className="inline-block bg-black text-white font-semibold tracking-wide uppercase px-6 py-3 border-b-[1.25px] border-black transition-colors"
+                className="inline-block bg-[#003366] text-white font-semibold tracking-wide uppercase px-6 py-3 border-b-2 border-[#c05621] transition-colors hover:bg-[#002244] shadow-md"
               >
                 Church News
               </a>
 
               <a
                 href="/calendar"
-                className="inline-block bg-white text-black font-semibold tracking-wide uppercase px-6 py-3 border border-gray-200 transition-colors"
+                className="inline-block bg-white text-[#003366] font-semibold tracking-wide uppercase px-6 py-3 border-2 border-[#003366] transition-colors hover:bg-[#003366] hover:text-white"
               >
                 Event Calendar
               </a>
 
               <a
                 href="/about#statement"
-                className="inline-block bg-black text-white font-semibold tracking-wide uppercase px-8 py-3 border-b-[1.25px] border-black transition-colors"
+                className="inline-block bg-[#003366] text-white font-semibold tracking-wide uppercase px-8 py-3 border-b-2 border-[#c05621] transition-colors hover:bg-[#002244] shadow-md"
               >
                 Statement of Faith
               </a>

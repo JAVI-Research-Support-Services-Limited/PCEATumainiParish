@@ -14,8 +14,8 @@ export default function Homepage() {
   const ministries = [
     {
       title: "Sunday Worship",
-      desc: "Join us for spirited worship every Sunday at 10AM & 5PM.",
-      img: "https://images.unsplash.com/photo-1510563342738-4144e8d246f9?auto=format&fit=crop&q=80&w=1000",
+      desc: "Join us for spirited worship every Sunday at 8:30AM to 12NOON.",
+      img: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=1000",
       link: "/ministries#worship",
     },
     {
@@ -25,10 +25,10 @@ export default function Homepage() {
       link: "/ministries#study",
     },
     {
-      title: "Women's Guild",
-      desc: "A sisterhood dedicated to service and spiritual growth.",
-      img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1000",
-      link: "/ministries#guild",
+      title: "Youth Ministry",
+      desc: "Empowering the next generation through faith and fellowship.",
+      img: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=1000",
+      link: "/ministries#youth",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function Homepage() {
   return (
     <>
       <HeroSection
-        title="Mwihoko Church"
+        title="Emmanuel Church"
         subtitle="A Congregation of P.C.E.A Tumaini Parish"
         verse="Commit your work to the LORD, and your plans will be established"
         verseRef="Proverbs 16:3"

@@ -20,7 +20,8 @@ export default function EmmanuelWorship() {
                     Deepen Your Faith Daily
                   </h1>
                   <h2 className="text-gray-100 text-sm font-normal leading-relaxed @[480px]:text-lg mt-4 max-w-lg mx-auto">
-                    Your central hub for worship, community, and spiritual growth. Join us online or in person.
+                    Your central hub for worship, community, and spiritual
+                    growth. Join us online or in person.
                   </h2>
                 </div>
                 <div className="flex gap-4 z-10 mt-4 flex-wrap justify-center">
@@ -52,19 +53,23 @@ export default function EmmanuelWorship() {
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/90 mix-blend-multiply"></div>
             <div className="relative z-10 flex flex-col items-center">
               <div className="flex items-center gap-2 mb-6">
-                <span className="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+                <span className="material-symbols-outlined text-primary text-xl">
+                  auto_awesome
+                </span>
                 <h3 className="text-gray-300 uppercase tracking-widest text-xs font-bold">
                   Verse of the Day
                 </h3>
-                <span className="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+                <span className="material-symbols-outlined text-primary text-xl">
+                  auto_awesome
+                </span>
               </div>
               <blockquote className="text-white text-2xl md:text-4xl font-serif italic mb-6 leading-relaxed max-w-3xl">
                 "The Lord is my shepherd, I lack nothing."
               </blockquote>
               <div className="flex items-center gap-3">
-                <div className="h-[1px] w-12 bg-primary"></div>
+                <div className="h-[1px] w-12 bg-[#003366]"></div>
                 <p className="text-white font-bold text-lg">Psalm 23:1</p>
-                <div className="h-[1px] w-12 bg-primary"></div>
+                <div className="h-[1px] w-12 bg-[#003366]"></div>
               </div>
             </div>
           </div>
@@ -97,7 +102,9 @@ export default function EmmanuelWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   40:00
                 </div>
               </div>
@@ -106,7 +113,9 @@ export default function EmmanuelWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     God With Us
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Pastor David • Oct 13</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Pastor David • Oct 13
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
                   Understanding the presence of God in our daily lives.
@@ -129,7 +138,9 @@ export default function EmmanuelWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   36:45
                 </div>
               </div>
@@ -138,7 +149,9 @@ export default function EmmanuelWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     Walking in Purpose
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Pastor Sarah • Oct 6</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Pastor Sarah • Oct 6
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
                   Discovering God's purpose for your life.
@@ -161,7 +174,9 @@ export default function EmmanuelWorship() {
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                  <span className="material-symbols-outlined text-sm">play_circle</span>
+                  <span className="material-symbols-outlined text-sm">
+                    play_circle
+                  </span>
                   50:00
                 </div>
               </div>
@@ -170,7 +185,9 @@ export default function EmmanuelWorship() {
                   <h3 className="text-gray-900 text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
                     Faith in Action
                   </h3>
-                  <p className="text-text-secondary text-sm font-medium">Guest Speaker • Sep 29</p>
+                  <p className="text-text-secondary text-sm font-medium">
+                    Guest Speaker • Sep 29
+                  </p>
                 </div>
                 <p className="text-gray-600 text-sm line-clamp-2">
                   How to live out your faith through service and love.
@@ -192,8 +209,13 @@ export default function EmmanuelWorship() {
           {/* Bible Study Groups */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between pb-2">
-              <h2 className="text-gray-900 text-2xl font-bold">Bible Study Groups</h2>
-              <Link to="/emmanuel" className="text-primary text-sm font-bold hover:text-blue-500">
+              <h2 className="text-gray-900 text-2xl font-bold">
+                Bible Study Groups
+              </h2>
+              <Link
+                to="/emmanuel"
+                className="text-primary text-sm font-bold hover:text-blue-500"
+              >
                 View All
               </Link>
             </div>
@@ -206,10 +228,14 @@ export default function EmmanuelWorship() {
                 }}
               ></div>
               <div className="flex-1 min-w-0">
-                <h4 className="text-gray-900 font-bold truncate">Psalms: A Study of Worship</h4>
-                <p className="text-text-secondary text-sm mb-2">Mondays • 6:00 PM</p>
+                <h4 className="text-gray-900 font-bold truncate">
+                  Psalms: A Study of Worship
+                </h4>
+                <p className="text-text-secondary text-sm mb-2">
+                  Mondays • 6:00 PM
+                </p>
                 <div className="w-full bg-background-dark h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-primary h-full w-3/5 rounded-full"></div>
+                  <div className="bg-[#c05621] h-full w-3/5 rounded-full"></div>
                 </div>
                 <p className="text-[10px] text-gray-500 mt-1 uppercase font-bold tracking-wider">
                   Session 7 of 12
@@ -228,10 +254,14 @@ export default function EmmanuelWorship() {
                 }}
               ></div>
               <div className="flex-1 min-w-0">
-                <h4 className="text-gray-900 font-bold truncate">Emmanuel Women's Fellowship</h4>
-                <p className="text-text-secondary text-sm mb-2">Thursdays • 5:30 PM</p>
+                <h4 className="text-gray-900 font-bold truncate">
+                  Emmanuel Women's Fellowship
+                </h4>
+                <p className="text-text-secondary text-sm mb-2">
+                  Thursdays • 5:30 PM
+                </p>
                 <div className="w-full bg-background-dark h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-primary h-full w-2/3 rounded-full"></div>
+                  <div className="bg-[#c05621] h-full w-2/3 rounded-full"></div>
                 </div>
                 <p className="text-[10px] text-gray-500 mt-1 uppercase font-bold tracking-wider">
                   Session 9 of 12
@@ -242,10 +272,13 @@ export default function EmmanuelWorship() {
               </button>
             </div>
 
-            <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-center mt-2">
+            <div className="bg-[#003366]/5 border border-[#003366]/20 rounded-xl p-4 text-center mt-2">
               <p className="text-sm text-gray-600">
                 Looking for something else?{" "}
-                <Link to="/emmanuel" className="text-primary font-bold underline decoration-primary/50 underline-offset-2">
+                <Link
+                  to="/emmanuel"
+                  className="text-[#003366] font-bold underline decoration-[#003366]/50 underline-offset-2"
+                >
                   Browse all 8 groups
                 </Link>
               </p>
@@ -255,16 +288,22 @@ export default function EmmanuelWorship() {
           {/* Prayer Requests */}
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between pb-4">
-              <h2 className="text-gray-900 text-2xl font-bold">Prayer Requests</h2>
+              <h2 className="text-gray-900 text-2xl font-bold">
+                Prayer Requests
+              </h2>
             </div>
             <div className="flex-1 bg-surface-dark border border-border-dark rounded-xl p-6 flex flex-col justify-between shadow-sm">
               <div>
                 <div className="flex items-start gap-3 mb-6">
-                  <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                    <span className="material-symbols-outlined">volunteer_activism</span>
+                  <div className="p-2 bg-[#003366]/10 rounded-lg text-[#003366]">
+                    <span className="material-symbols-outlined">
+                      volunteer_activism
+                    </span>
                   </div>
                   <div>
-                    <h3 className="text-gray-900 font-bold text-lg">How can we pray for you?</h3>
+                    <h3 className="text-gray-900 font-bold text-lg">
+                      How can we pray for you?
+                    </h3>
                     <p className="text-text-secondary text-sm">
                       Your requests are shared with our pastoral team.
                     </p>
@@ -305,7 +344,7 @@ export default function EmmanuelWorship() {
                   </div>
                 </form>
               </div>
-              <button className="w-full mt-6 bg-primary text-white font-bold h-12 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+              <button className="w-full mt-6 bg-[#003366] text-white font-bold h-12 rounded-lg hover:bg-[#002244] transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
                 <span>Submit Prayer Request</span>
                 <span className="material-symbols-outlined text-lg">send</span>
               </button>

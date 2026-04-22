@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import Layout from '@/components/site/Layout';
+import React, { useState, useEffect } from "react";
+import Layout from "@/components/site/Layout";
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
-const givingTypes = ['Tithe', 'Offering', 'Development Fund', 'MMF Fund'];
+const givingTypes = ["Tithe", "Offering", "Development Fund", "MMF Fund"];
 
 export default function StLukeGive() {
-  const [givingType, setGivingType] = useState('Tithe');
-  const [amount, setAmount] = useState('');
-  const [fullName, setFullName] = useState('');
-  const [district, setDistrict] = useState('');
-  const [group, setGroup] = useState('');
-  const [phone, setPhone] = useState('');
+  const [givingType, setGivingType] = useState("Tithe");
+  const [amount, setAmount] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [district, setDistrict] = useState("");
+  const [group, setGroup] = useState("");
+  const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [checkoutId, setCheckoutId] = useState<string | null>(null);
   const [pollingCount, setPollingCount] = useState(0);
 
   const normalizePhone = (value: string) => {
-    let p = value.replace(/\s+/g, '');
-    if (p.startsWith('0')) p = '254' + p.slice(1);
-    if (p.startsWith('+254')) p = p.slice(1);
+    let p = value.replace(/\s+/g, "");
+    if (p.startsWith("0")) p = "254" + p.slice(1);
+    if (p.startsWith("+254")) p = p.slice(1);
     return p;
   };
 
@@ -29,35 +29,37 @@ export default function StLukeGive() {
     if (!checkoutId) return;
 
     console.log(`🔍 Polling payment status (attempt ${pollingCount + 1})...`);
-    console.log('CheckoutID:', checkoutId);
+    console.log("CheckoutID:", checkoutId);
 
     try {
       const res = await fetch(`${API_URL}/api/mpesa/status/${checkoutId}`);
       const data = await res.json();
-      
-      console.log('Poll response:', data);
 
-      if (data.success && data.status === 'completed') {
-        console.log('✅ Payment completed!');
+      console.log("Poll response:", data);
+
+      if (data.success && data.status === "completed") {
+        console.log("✅ Payment completed!");
         setSuccess(true);
         setLoading(false);
         setCheckoutId(null);
         setPollingCount(0);
-      } else if (data.success && data.status === 'failed') {
-        console.log('❌ Payment failed');
-        setError(data.resultDesc || 'Payment failed. Please try again.');
+      } else if (data.success && data.status === "failed") {
+        console.log("❌ Payment failed");
+        setError(data.resultDesc || "Payment failed. Please try again.");
         setLoading(false);
         setCheckoutId(null);
         setPollingCount(0);
       } else {
         // Still pending
-        console.log('⏳ Payment still pending...');
-        setPollingCount(prev => prev + 1);
-        
+        console.log("⏳ Payment still pending...");
+        setPollingCount((prev) => prev + 1);
+
         // Stop polling after 40 attempts (2 minutes)
         if (pollingCount >= 40) {
-          console.log('⚠️ Polling timeout');
-          setError('Payment is taking longer than expected. Please check with the church office.');
+          console.log("⚠️ Polling timeout");
+          setError(
+            "Payment is taking longer than expected. Please check with the church office.",
+          );
           setLoading(false);
           setCheckoutId(null);
           setPollingCount(0);
@@ -67,8 +69,8 @@ export default function StLukeGive() {
         }
       }
     } catch (err) {
-      console.error('Polling error:', err);
-      setError('Error checking payment status. Please refresh the page.');
+      console.error("Polling error:", err);
+      setError("Error checking payment status. Please refresh the page.");
       setLoading(false);
       setCheckoutId(null);
       setPollingCount(0);
@@ -84,19 +86,19 @@ export default function StLukeGive() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setSuccess(false);
 
-    console.log('📝 Form submitted');
+    console.log("📝 Form submitted");
 
     if (!fullName || !amount || !phone) {
-      setError('Please fill all required fields');
+      setError("Please fill all required fields");
       return;
     }
 
     const formattedPhone = normalizePhone(phone);
     if (!/^2547\d{8}$/.test(formattedPhone)) {
-      setError('Enter a valid Safaricom number (07XXXXXXXX)');
+      setError("Enter a valid Safaricom number (07XXXXXXXX)");
       return;
     }
 
@@ -110,39 +112,39 @@ export default function StLukeGive() {
       group: group || undefined,
     };
 
-    console.log('💳 Initiating payment:', paymentData);
+    console.log("💳 Initiating payment:", paymentData);
 
     try {
       setLoading(true);
 
       const res = await fetch(`${API_URL}/api/mpesa/stkpush`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(paymentData),
       });
 
       const data = await res.json();
-      console.log('STK Push response:', data);
+      console.log("STK Push response:", data);
 
       if (!data.success) {
-        console.error('STK Push failed:', data);
-        setError(data.message || 'Payment failed');
+        console.error("STK Push failed:", data);
+        setError(data.message || "Payment failed");
         setLoading(false);
         return;
       }
 
-      console.log('✅ STK Push sent!');
-      console.log('CheckoutRequestID:', data.data.CheckoutRequestID);
+      console.log("✅ STK Push sent!");
+      console.log("CheckoutRequestID:", data.data.CheckoutRequestID);
 
       // Save checkoutId to start polling
       setCheckoutId(data.data.CheckoutRequestID);
 
       // Reset form fields
-      setAmount('');
-      setPhone('');
+      setAmount("");
+      setPhone("");
     } catch (err) {
-      console.error('Network error:', err);
-      setError('Network error. Please check your connection and try again.');
+      console.error("Network error:", err);
+      setError("Network error. Please check your connection and try again.");
       setLoading(false);
     }
   };
@@ -159,8 +161,13 @@ export default function StLukeGive() {
           </p>
 
           {success && (
-            <div className="mb-4 bg-green-100 text-green-700 p-3 rounded">
-              ✅ Payment successful! Thank you for your giving.
+            <div className="mb-6 p-5 bg-[#003366] text-white rounded-lg border-l-4 border-[#c05621] shadow-lg animate-in fade-in slide-in-from-top-4 duration-500">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl text-[#c05621]">✓</span>
+                <p className="font-sans font-bold">
+                  Payment Successful! Thank you for your faithful giving.
+                </p>
+              </div>
             </div>
           )}
 
@@ -172,7 +179,8 @@ export default function StLukeGive() {
 
           {loading && (
             <div className="mb-4 bg-blue-100 text-blue-700 p-3 rounded">
-              ⏳ Processing payment... Please complete the M-Pesa prompt on your phone.
+              ⏳ Processing payment... Please complete the M-Pesa prompt on your
+              phone.
               {pollingCount > 0 && ` (${pollingCount * 3}s elapsed)`}
             </div>
           )}
@@ -183,7 +191,7 @@ export default function StLukeGive() {
               Giving Type
             </label>
             <div className="grid grid-cols-2 gap-3">
-              {givingTypes.map(type => (
+              {givingTypes.map((type) => (
                 <button
                   key={type}
                   type="button"
@@ -191,8 +199,8 @@ export default function StLukeGive() {
                   disabled={loading}
                   className={`py-2 rounded border font-medium ${
                     givingType === type
-                      ? 'bg-black text-white'
-                      : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
+                      ? "bg-[#003366] text-white"
+                      : "bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700"
                   } disabled:opacity-50`}
                 >
                   {type}
@@ -209,21 +217,21 @@ export default function StLukeGive() {
               disabled={loading}
               className="w-full border p-3 rounded dark:bg-gray-800 dark:text-white disabled:opacity-50"
               value={fullName}
-              onChange={e => setFullName(e.target.value)}
+              onChange={(e) => setFullName(e.target.value)}
             />
             <input
               placeholder="District (optional)"
               disabled={loading}
               className="w-full border p-3 rounded dark:bg-gray-800 dark:text-white disabled:opacity-50"
               value={district}
-              onChange={e => setDistrict(e.target.value)}
+              onChange={(e) => setDistrict(e.target.value)}
             />
             <input
               placeholder="Group (optional)"
               disabled={loading}
               className="w-full border p-3 rounded dark:bg-gray-800 dark:text-white disabled:opacity-50"
               value={group}
-              onChange={e => setGroup(e.target.value)}
+              onChange={(e) => setGroup(e.target.value)}
             />
             <input
               type="number"
@@ -233,7 +241,7 @@ export default function StLukeGive() {
               disabled={loading}
               className="w-full border p-3 rounded dark:bg-gray-800 dark:text-white disabled:opacity-50"
               value={amount}
-              onChange={e => setAmount(e.target.value)}
+              onChange={(e) => setAmount(e.target.value)}
             />
             <input
               placeholder="M-Pesa Phone (07XXXXXXXX) *"
@@ -241,15 +249,15 @@ export default function StLukeGive() {
               disabled={loading}
               className="w-full border p-3 rounded dark:bg-gray-800 dark:text-white disabled:opacity-50"
               value={phone}
-              onChange={e => setPhone(e.target.value)}
+              onChange={(e) => setPhone(e.target.value)}
             />
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-black text-white py-3 rounded font-bold hover:bg-black/90 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full bg-[#003366] text-white py-3 rounded font-bold hover:bg-[#002244] disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
             >
-              {loading ? 'Processing...' : 'Give Now'}
+              {loading ? "Processing..." : "Give Now"}
             </button>
           </form>
         </div>

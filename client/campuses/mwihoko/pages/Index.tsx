@@ -56,24 +56,36 @@ export default function Index() {
             <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button className="font-sans bg-white text-black hover:bg-neutral-300 active:bg-neutral-400 h-12 px-8 text-base transition-colors rounded-sm">
+                  <Button className="font-sans bg-white text-[#003366] hover:bg-neutral-300 active:bg-neutral-400 h-12 px-8 text-base transition-colors rounded-sm">
                     Explore Your Parish <ChevronDown className="ml-2 h-5 w-5" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="min-w-[220px] bg-black text-white border-white/20 backdrop-blur-md">
-                  <DropdownMenuItem asChild className="focus:bg-white/20 focus:text-white cursor-pointer py-3">
+                  <DropdownMenuItem
+                    asChild
+                    className="focus:bg-white/20 focus:text-white cursor-pointer py-3"
+                  >
                     <Link to="/st-luke">St Luke Church</Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild className="focus:bg-white/20 focus:text-white cursor-pointer py-3">
+                  <DropdownMenuItem
+                    asChild
+                    className="focus:bg-white/20 focus:text-white cursor-pointer py-3"
+                  >
                     <Link to="/mwihoko">Mwihoko Church</Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild className="focus:bg-white/20 focus:text-white cursor-pointer py-3">
+                  <DropdownMenuItem
+                    asChild
+                    className="focus:bg-white/20 focus:text-white cursor-pointer py-3"
+                  >
                     <Link to="/emmanuel">Emmanuel Church</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <Button asChild className="font-sans bg-black text-white hover:bg-neutral-600 active:bg-neutral-800 h-12 px-8 text-base transition-colors rounded-sm">
+              <Button
+                asChild
+                className="font-sans bg-[#003366] text-white hover:bg-[#002244] active:bg-[#001122] h-12 px-8 text-base transition-colors rounded-sm shadow-md"
+              >
                 <Link to="/give">Give</Link>
               </Button>
             </div>

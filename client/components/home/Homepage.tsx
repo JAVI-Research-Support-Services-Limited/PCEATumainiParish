@@ -14,7 +14,7 @@ export default function Homepage() {
   const ministries = [
     {
       title: "Sunday Worship",
-      desc: "Join us for spirited worship every Sunday at 10AM & 5PM.",
+      desc: "Join us for spirited worship every Sunday at 8:30AM to 12NOON.",
       img: "https://images.unsplash.com/photo-1510563342738-4144e8d246f9?auto=format&fit=crop&q=80&w=1000",
       link: "/ministries#worship",
     },

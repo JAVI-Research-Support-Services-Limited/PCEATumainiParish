@@ -18,12 +18,12 @@ export default function Homepage() {
       <AboutSection />
       <MinistriesPreview />
       <NextStepsPreview />
-      
+
       {/* Video Section with St. Luke specific YouTube video */}
       <VideoSection youtubeUrl="https://www.youtube.com/watch?v=uO-3TlqNUyY" />
 
       {/* SECTION 6: LOCATION */}
-      <section id="location" className="relative z-20 bg-neutral-900 py-0 px-0">
+      <section id="location" className="relative z-20 bg-[#003366] py-0 px-0">
         <iframe
           width="1440"
           height="600"

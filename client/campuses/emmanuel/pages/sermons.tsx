@@ -22,8 +22,8 @@ export default function Sermons() {
             Sermon <span className="italic font-light text-black">Archive</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed font-sans">
-            Explore our library of teachings designed to nurture your faith. Reconnect with the
-            Word, find peace, and discover spiritual balance.
+            Explore our library of teachings designed to nurture your faith.
+            Reconnect with the Word, find peace, and discover spiritual balance.
           </p>
         </div>
       </header>
@@ -99,8 +99,8 @@ export default function Sermons() {
                 </h3>
               </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                <button className="bg-black/90 text-white rounded-full p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
-                  <Play className="w-8 h-8 ml-1" />
+                <button className="bg-[#003366]/90 text-white rounded-full p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                  <Play className="w-8 h-8 ml-1 text-[#c05621]" />
                 </button>
               </div>
             </div>
@@ -115,21 +115,26 @@ export default function Sermons() {
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3 font-sans">
-                  Understanding the transformative power of the Holy Spirit in our daily lives. An
-                  exploration of Romans 8 and what it means to be led by the Spirit rather than
-                  the flesh.
+                  Understanding the transformative power of the Holy Spirit in
+                  our daily lives. An exploration of Romans 8 and what it means
+                  to be led by the Spirit rather than the flesh.
                 </p>
               </div>
               <div className="pt-4 border-t border-gray-100 dark:border-white/5 flex justify-between items-center mt-auto">
-                <span className="text-xs text-gray-400 font-mono font-sans">ROM 8:1-17</span>
+                <span className="text-xs text-gray-400 font-mono font-sans">
+                  ROM 8:1-17
+                </span>
                 <div className="flex space-x-2">
                   <button
-                    className="text-gray-400 hover:text-black transition-colors"
+                    className="text-gray-400 hover:text-[#003366] transition-colors"
                     title="Download Audio"
                   >
                     <Headphones className="w-5 h-5" />
                   </button>
-                  <button className="text-gray-400 hover:text-black transition-colors" title="Share">
+                  <button
+                    className="text-gray-400 hover:text-[#003366] transition-colors"
+                    title="Share"
+                  >
                     <Share2 className="w-5 h-5" />
                   </button>
                 </div>
@@ -158,8 +163,8 @@ export default function Sermons() {
                 </h3>
               </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                <button className="bg-black/90 text-white rounded-full p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
-                  <Play className="w-8 h-8 ml-1" />
+                <button className="bg-[#003366]/90 text-white rounded-full p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                  <Play className="w-8 h-8 ml-1 text-[#c05621]" />
                 </button>
               </div>
             </div>
@@ -174,20 +179,26 @@ export default function Sermons() {
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3 font-sans">
-                  When prayers seem unanswered and the heavens feel like brass, how do we maintain
-                  faith? Exploring the Psalms of lament and finding hope in the silence.
+                  When prayers seem unanswered and the heavens feel like brass,
+                  how do we maintain faith? Exploring the Psalms of lament and
+                  finding hope in the silence.
                 </p>
               </div>
               <div className="pt-4 border-t border-gray-100 dark:border-white/5 flex justify-between items-center mt-auto">
-                <span className="text-xs text-gray-400 font-mono font-sans">PSALM 22</span>
+                <span className="text-xs text-gray-400 font-mono font-sans">
+                  PSALM 22
+                </span>
                 <div className="flex space-x-2">
                   <button
-                    className="text-gray-400 hover:text-black transition-colors"
+                    className="text-gray-400 hover:text-[#003366] transition-colors"
                     title="Download Audio"
                   >
                     <Headphones className="w-5 h-5" />
                   </button>
-                  <button className="text-gray-400 hover:text-black transition-colors" title="Share">
+                  <button
+                    className="text-gray-400 hover:text-[#003366] transition-colors"
+                    title="Share"
+                  >
                     <Share2 className="w-5 h-5" />
                   </button>
                 </div>
@@ -211,11 +222,13 @@ export default function Sermons() {
                 <span className="text-black text-xs font-bold uppercase tracking-widest mb-1 block font-sans">
                   Creation • Part 2
                 </span>
-                <h3 className="font-display text-2xl text-white leading-tight">Stars & Dust</h3>
+                <h3 className="font-display text-2xl text-white leading-tight">
+                  Stars & Dust
+                </h3>
               </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                <button className="bg-black/90 text-white rounded-full p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
-                  <Play className="w-8 h-8 ml-1" />
+                <button className="bg-[#003366]/90 text-white rounded-full p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                  <Play className="w-8 h-8 ml-1 text-[#c05621]" />
                 </button>
               </div>
             </div>
@@ -230,20 +243,26 @@ export default function Sermons() {
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3 font-sans">
-                  We are made of dust, yet filled with the breath of God. A look at the creation
-                  narrative and our responsibility as stewards of the earth.
+                  We are made of dust, yet filled with the breath of God. A look
+                  at the creation narrative and our responsibility as stewards
+                  of the earth.
                 </p>
               </div>
               <div className="pt-4 border-t border-gray-100 dark:border-white/5 flex justify-between items-center mt-auto">
-                <span className="text-xs text-gray-400 font-mono font-sans">GEN 1:26</span>
+                <span className="text-xs text-gray-400 font-mono font-sans">
+                  GEN 1:26
+                </span>
                 <div className="flex space-x-2">
                   <button
-                    className="text-gray-400 hover:text-black transition-colors"
+                    className="text-gray-400 hover:text-[#003366] transition-colors"
                     title="Download Audio"
                   >
                     <Headphones className="w-5 h-5" />
                   </button>
-                  <button className="text-gray-400 hover:text-black transition-colors" title="Share">
+                  <button
+                    className="text-gray-400 hover:text-[#003366] transition-colors"
+                    title="Share"
+                  >
                     <Share2 className="w-5 h-5" />
                   </button>
                 </div>
@@ -263,7 +282,7 @@ export default function Sermons() {
             </button>
             <button
               aria-current="page"
-              className="relative z-10 inline-flex items-center px-4 py-2 rounded-lg border border-black bg-black/10 text-sm font-medium text-black focus:z-10 focus:outline-none focus:ring-1 focus:ring-black focus:border-black font-sans"
+              className="relative z-10 inline-flex items-center px-4 py-2 rounded-lg border border-[#003366] bg-[#003366]/10 text-sm font-medium text-[#003366] focus:z-10 focus:outline-none focus:ring-1 focus:ring-[#003366] focus:border-[#003366] font-sans"
             >
               1
             </button>

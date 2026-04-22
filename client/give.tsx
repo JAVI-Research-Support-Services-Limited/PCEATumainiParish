@@ -14,8 +14,8 @@ const CHURCHES: Church[] = [
     id: "st-luke",
     name: "St Luke Church",
     congregation: "Downtown Congregation",
-    address: "123 Main Street, City",
-    times: "Sun 9AM & 11AM",
+    address: "Corradini Area, Nairobi",
+    times: "8:30AM to 12NOON",
     imageUrl:
       "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=800",
   },
@@ -23,8 +23,8 @@ const CHURCHES: Church[] = [
     id: "mwihoko",
     name: "Mwihoko Church",
     congregation: "North Congregation",
-    address: "456 North Road, Town",
-    times: "Sun 8AM & 10:30AM",
+    address: "Mihang'o area, Nairobi",
+    times: "8:30AM to 12NOON",
     imageUrl:
       "https://images.unsplash.com/photo-1548625361-195feee130d5?auto=format&fit=crop&q=80&w=800",
   },
@@ -32,8 +32,8 @@ const CHURCHES: Church[] = [
     id: "emmanuel",
     name: "Emmanuel Church",
     congregation: "West Congregation",
-    address: "789 West Avenue, Suburb",
-    times: "Sun 7:30AM & 9:30AM",
+    address: "Karagita Area, Nairobi",
+    times: "8:30AM to 12NOON",
     imageUrl:
       "https://images.unsplash.com/photo-1523050335456-adabbf72c766?auto=format&fit=crop&q=80&w=800",
   },
