@@ -20,9 +20,7 @@ const StLukeRoutes = React.lazy(() => import("./congregations/st-luke/routes"));
 const MwihokoRoutes = React.lazy(
   () => import("./congregations/mwihoko/routes"),
 );
-const EmmanuelRoutes = React.lazy(
-  () => import("./congregations/emmanuel/routes"),
-);
+const EmmanuelRoutes = React.lazy(() => import("./routes"));
 
 // Fallback page
 const NotFound = React.lazy(() => import("./NotFound"));

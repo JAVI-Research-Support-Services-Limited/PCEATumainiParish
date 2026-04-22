@@ -12,26 +12,26 @@ import {
 const CHURCHES: Church[] = [
   {
     id: "st-luke",
-    name: "St Luke Church",
-    congregation: "Downtown Congregation",
+    name: "St Luke Church", //
+    congregation: "Downtown Congregation", //
     address: "Corradini Area, Nairobi",
     times: "8:30AM to 12NOON",
     imageUrl:
       "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: "mwihoko",
-    name: "Mwihoko Church",
-    congregation: "North Congregation",
+    id: "mwihoko", //
+    name: "Mwihoko Church", //
+    congregation: "North Congregation", //
     address: "Mihang'o area, Nairobi",
     times: "8:30AM to 12NOON",
     imageUrl:
       "https://images.unsplash.com/photo-1548625361-195feee130d5?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: "emmanuel",
-    name: "Emmanuel Church",
-    congregation: "West Congregation",
+    id: "emmanuel", //
+    name: "Emmanuel Church", //
+    congregation: "West Congregation", //
     address: "Karagita Area, Nairobi",
     times: "8:30AM to 12NOON",
     imageUrl:

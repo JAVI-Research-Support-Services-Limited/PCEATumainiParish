@@ -1,5 +1,5 @@
-import { HeroSection } from "@/components/home/HeroSection";
-import { VideoSection } from "@/components/home/VideoSection";
+import HeroSection from "@/components/home/HeroSection";
+import VideoSection from "@/components/home/VideoSection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {

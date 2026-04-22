@@ -12,26 +12,26 @@ import {
 const CHURCHES: Church[] = [
   {
     id: "st-luke",
-    name: "St Luke Church",
-    congregation: "Downtown Congregation",
+    name: "St Luke Church", //
+    congregation: "Downtown Congregation", //
     address: "123 Main Street, City",
     times: "Sun 9AM & 11AM",
     imageUrl:
       "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: "mwihoko",
-    name: "Mwihoko Church",
-    congregation: "North Congregation",
+    id: "mwihoko", //
+    name: "Mwihoko Church", //
+    congregation: "North Congregation", //
     address: "456 North Road, Town",
     times: "Sun 8AM & 10:30AM",
     imageUrl:
       "https://images.unsplash.com/photo-1548625361-195feee130d5?auto=format&fit=crop&q=80&w=800",
   },
   {
-    id: "emmanuel",
-    name: "Emmanuel Church",
-    congregation: "West Congregation",
+    id: "emmanuel", //
+    name: "Emmanuel Church", //
+    congregation: "West Congregation", //
     address: "789 West Avenue, Suburb",
     times: "Sun 7:30AM & 9:30AM",
     imageUrl:
@@ -89,7 +89,7 @@ export default function Give() {
           <div className="lg:col-span-4 space-y-6">
             <ChurchInfo church={selectedChurch} />
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <div className="flex items-center space-x-3 mb-4 text-[#003366]">
+              <div className="flex items-center space-x-3 mb-4 text-primary">
                 <span className="material-icons">volunteer_activism</span>
                 <h3 className="text-lg font-display">Faith, Love, Hope</h3>
               </div>

@@ -1,8 +1,8 @@
 export enum GivingType {
   TITHE = "Tithe",
-  OFFERING = "Offering",
-  THANKSGIVING = "Thanksgiving",
-  DEVELOPMENT = "Development",
+  OFFERTORY = "Offertory",
+  PROJECT = "Project",
+  OTHER = "Other",
 }
 
 export enum PaymentMethod {
@@ -13,7 +13,7 @@ export enum PaymentMethod {
 export interface Church {
   id: string;
   name: string;
-  congregation: string;
+  congregation: string; // Added this property to resolve TS2353 error
   address: string;
   times: string;
   imageUrl: string;

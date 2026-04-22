@@ -1,9 +1,9 @@
 import Layout from "@/components/site/Layout";
-import { HeroSection } from "@/components/home/HeroSection";
-import { AboutSection } from "@/components/home/AboutSection";
-import { MinistriesPreview } from "@/components/home/MinistriesPreview";
-import { NextStepsPreview } from "@/components/home/NextStepsPreview";
-import { VideoSection } from "@/components/home/VideoSection";
+import HeroSection from "@/components/home/HeroSection";
+import AboutSection from "@/components/home/AboutSection";
+import MinistriesPreview from "@/components/home/MinistriesPreview";
+import NextStepsPreview from "@/components/home/NextStepsPreview";
+import VideoSection from "@/components/home/VideoSection";
 
 export default function Emmanuel() {
   return (
