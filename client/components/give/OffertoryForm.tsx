@@ -58,7 +58,7 @@ const OffertoryForm: React.FC<OffertoryFormProps> = ({
                 </div>
                 <h4 className="font-sans font-bold text-sm leading-tight">{church.name}</h4>
                 <p className={`text-[11px] mt-1 font-sans font-medium ${formData.churchId === church.id ? 'text-white/70' : 'text-gray-500'}`}>
-                  {church.campus}
+                  {church.congregation}
                 </p>
               </div>
             ))}

@@ -109,3 +109,5 @@ export function MinistriesPreview() {
     </section>
   );
 }
+
+export default MinistriesPreview;

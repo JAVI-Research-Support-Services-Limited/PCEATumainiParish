@@ -17,7 +17,7 @@ const ChurchInfo: React.FC<ChurchInfoProps> = ({ church }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
           <h2 className="text-white text-2xl font-display">{church.name}</h2>
-          <p className="text-gray-300 text-sm font-sans">{church.campus}</p>
+          <p className="text-gray-300 text-sm font-sans">{church.congregation}</p>
         </div>
       </div>
       <div className="p-6 space-y-4">

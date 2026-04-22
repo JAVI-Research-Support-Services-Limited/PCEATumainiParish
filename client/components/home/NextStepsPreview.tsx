@@ -58,3 +58,5 @@ export function NextStepsPreview() {
     </section>
   );
 }
+
+export default NextStepsPreview;

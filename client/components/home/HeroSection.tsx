@@ -7,6 +7,7 @@ interface HeroSectionProps {
   verse?: string;
   verseRef?: string;
   videoSrc?: string;
+  backgroundImage?: string;
   showDropdown?: boolean;
 }
 
@@ -16,6 +17,7 @@ export default function HeroSection({
   verse = "For where two or three gather in my name, there am I with them.",
   verseRef = "Matthew 18:20",
   videoSrc,
+  backgroundImage = "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920&q=80",
   showDropdown = true,
 }: HeroSectionProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -59,7 +61,7 @@ export default function HeroSection({
             />
           ) : (
             <img
-              src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920&q=80"
+              src={backgroundImage}
               alt="Prayer background"
               className="w-full h-full object-cover"
             />

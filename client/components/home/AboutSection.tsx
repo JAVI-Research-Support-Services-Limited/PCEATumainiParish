@@ -42,3 +42,5 @@ export function AboutSection() {
     </section>
   );
 }
+
+export default AboutSection;
