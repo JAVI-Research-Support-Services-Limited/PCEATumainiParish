@@ -10,6 +10,7 @@ interface HeroSectionProps {
   showDropdown?: boolean;
 }
 
+export { HeroSection };
 export default function HeroSection({
   title = "Welcome to Our Parish Community",
   subtitle = "Commit your work to the LORD, and your plans will be established.",
