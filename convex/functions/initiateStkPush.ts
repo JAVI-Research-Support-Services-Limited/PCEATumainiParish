@@ -13,7 +13,7 @@ export const initiateStkPush = action({
     accountReference: v.string(),
     transactionDesc: v.string(),
   },
-  handler: async (ctx, args) => {
+  handler: async (ctx, args): Promise<any> => {
     try {
       // M-Pesa API credentials from environment variables
       const consumerKey = process.env.MPESA_CONSUMER_KEY!;
